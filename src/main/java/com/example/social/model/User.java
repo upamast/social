@@ -1,15 +1,27 @@
 package com.example.social.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data // no need for getter & setter
+@NoArgsConstructor // constructor without parameters is already defined
+@AllArgsConstructor
+
 public class User {
 
+
+    private String id;
     private String name;
     private String address;
     private String phoneNumber;
 
-    public User(String name, String address, String phoneNumber) {
-        this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
